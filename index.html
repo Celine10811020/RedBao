@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+
+  <title>紅包包</title>
+</head>
+
+<body>
+  <div class="container">
+    <canvas id="fireworks"></canvas>
+    <canvas id="stars"></canvas>
+
+    <div id="red-envelope" class="red-envelope">
+      <div class="body">
+        <div class="flap"></div>
+      </div>
+      <div class="golden-circle"></div>
+    </div>
+
+    <audio id="fireworks-sound" src="sound.mp3" preload="auto"></audio>
+
+    <div id="card" class="card hidden">
+      <p id="verse-text"></p>
+    </div>
+  </div>
+</body>
+
+<script src="firework.js"></script>
+<script src="star.js"></script>
+
+</html>

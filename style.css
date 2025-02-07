@@ -1,0 +1,104 @@
+body {
+  font-family: 'Font', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #30cfd0 0%, #330867 100%);
+  background-size: 400% 400%;
+  animation: flowBg 10s infinite linear;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+/* 紅包 */
+.red-envelope {
+  width: 180px;
+  height: 240px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.red-envelope:hover {
+  transform: scale(1.05);
+}
+.red-envelope .flap {
+  width: 100%;
+  height: 50px;
+  background: #f9591f;
+  position: absolute;
+  top: 0;
+  clip-path: polygon(3% 0%, 97% 0%, 50% 100%);
+}
+.red-envelope .body {
+  width: 100%;
+  height: 190px;
+  background: linear-gradient(to bottom, #ff4500, #b22222);
+  position: absolute;
+  bottom: 0;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.golden-circle {
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #ffd700, #ffcc00);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+/* 小卡 */
+.card {
+  width: 220px;
+  min-height: auto;
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.hidden {
+  display: none;
+}
+
+/* 煙火 */
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+/* 流動背景動畫 */
+@keyframes flowBg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@font-face {
+  font-family: 'Font';
+  src: url('font.ttf') format('truetype');
+}
