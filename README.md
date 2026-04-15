@@ -6,7 +6,7 @@ Built with **HTML, CSS, and JavaScript**, this project combines scripture, anima
 
 ## Live Demo
 
-[Open RedBao](https://celine10811020.github.io/RedBao/)
+[Open Red Envelope](https://celine10811020.github.io/RedBao/)
 
 ## About the Project
 
